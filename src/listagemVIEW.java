@@ -202,6 +202,7 @@ public class listagemVIEW extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void listarProdutos(){
+        System.out.println("ENTROU NO LISTAR PRODUTOS");
         try {
             ProdutosDAO produtosdao = new ProdutosDAO();
             
@@ -219,6 +220,8 @@ public class listagemVIEW extends javax.swing.JFrame {
                 });
             }
         } catch (Exception e) {
+            e.printStackTrace();
+            javax.swing.JOptionPane.showMessageDialog(null, "Erro ao listar produtos: " + e.getMessage());
         }
     
     }
